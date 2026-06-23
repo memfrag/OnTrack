@@ -26,11 +26,25 @@ struct OverviewScreen: View {
     private var currentTrendKg: Double? { AnalyticsEngine.currentTrend(entries) }
     private var weeklyChangeKg: Double? { AnalyticsEngine.weeklyChange(entries) }
 
+    /// Range driving the macOS stat cards and chart.
+    @State private var range: ChartRange = .quarter
+
     /// The weight used for goal progress / forecast: the smoothed trend, falling back to the
     /// latest raw measurement when there isn't enough data for a trend.
     private var referenceWeightKg: Double? { currentTrendKg ?? latest?.weightKg }
 
     private let columns = [GridItem(.adaptive(minimum: 150), spacing: 12)]
+
+    #if os(macOS)
+    /// "MMM d – MMM d, yyyy" describing the visible range, shown as the window subtitle.
+    private var rangeSubtitle: String {
+        let end = Date.now
+        let start = range.startDate() ?? entries.last?.timestamp ?? end
+        let from = start.formatted(.dateTime.month(.abbreviated).day())
+        let to = end.formatted(.dateTime.month(.abbreviated).day().year())
+        return "\(from) – \(to)"
+    }
+    #endif
 
     var body: some View {
         @Bindable var router = router
@@ -47,6 +61,9 @@ struct OverviewScreen: View {
                         router.presentSheet(.addWeight)
                     }
                 } else {
+                    #if os(macOS)
+                    MacOverviewContent(entries: entries, goal: goal, unit: unit, range: range)
+                    #else
                     ScrollView {
                         VStack(spacing: 16) {
                             metricsGrid
@@ -63,10 +80,25 @@ struct OverviewScreen: View {
                         }
                         .padding()
                     }
+                    #endif
                 }
             }
             .navigationTitle("Overview")
+            #if os(macOS)
+            .navigationSubtitle(rangeSubtitle)
+            #endif
             .toolbar {
+                #if os(macOS)
+                ToolbarItem(placement: .principal) {
+                    Picker("Range", selection: $range) {
+                        ForEach(ChartRange.allCases) { range in
+                            Text(range.label).tag(range)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .labelsHidden()
+                }
+                #endif
                 ToolbarItem(placement: .primaryAction) {
                     AddWeightToolbarButton()
                 }
