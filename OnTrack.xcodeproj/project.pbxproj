@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		056912A677A6BDB1891BE621 /* OnTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OnTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CF6380FE42DB1DF05B132E /* AppDesign */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppDesign; path = Packages/AppDesign; sourceTree = SOURCE_ROOT; };
+		D7E57A00000000000000A002 /* OnTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -55,6 +56,11 @@
 				5CB868D616B6D4659F1345C0 /* Exceptions for "OnTrack" folder in "OnTrack" target */,
 			);
 			path = OnTrack;
+			sourceTree = "<group>";
+		};
+		D7E57A00000000000000A003 /* OnTrackTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OnTrackTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -87,6 +93,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7E57A00000000000000A005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				056912A677A6BDB1891BE621 /* OnTrack.app */,
+				D7E57A00000000000000A002 /* OnTrackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5F4C752BAD6A0155830ED7FB /* OnTrack */,
+				D7E57A00000000000000A003 /* OnTrackTests */,
 				2836D2956C5795B37A4FA6B1 /* Packages */,
 				390D31A4C3CA47030889F87B /* Products */,
 			);
@@ -163,7 +178,48 @@
 			productReference = 056912A677A6BDB1891BE621 /* OnTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D7E57A00000000000000A001 /* OnTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7E57A00000000000000A007 /* Build configuration list for PBXNativeTarget "OnTrackTests" */;
+			buildPhases = (
+				D7E57A00000000000000A004 /* Sources */,
+				D7E57A00000000000000A005 /* Frameworks */,
+				D7E57A00000000000000A006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7E57A00000000000000A00A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D7E57A00000000000000A003 /* OnTrackTests */,
+			);
+			name = OnTrackTests;
+			packageProductDependencies = (
+			);
+			productName = OnTrackTests;
+			productReference = D7E57A00000000000000A002 /* OnTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		D7E57A00000000000000A00B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE7DAF5A2511C8F646544524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 787DA3D7436CB4BC2C86E24D;
+			remoteInfo = OnTrack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		D7E57A00000000000000A00A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 787DA3D7436CB4BC2C86E24D /* OnTrack */;
+			targetProxy = D7E57A00000000000000A00B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		FE7DAF5A2511C8F646544524 /* Project object */ = {
@@ -175,6 +231,10 @@
 				TargetAttributes = {
 					787DA3D7436CB4BC2C86E24D = {
 						DevelopmentTeam = DR5YAK7GKS;
+					};
+					D7E57A00000000000000A001 = {
+						DevelopmentTeam = DR5YAK7GKS;
+						TestTargetID = 787DA3D7436CB4BC2C86E24D;
 					};
 				};
 			};
@@ -215,6 +275,7 @@
 			projectRoot = "";
 			targets = (
 				787DA3D7436CB4BC2C86E24D /* OnTrack */,
+				D7E57A00000000000000A001 /* OnTrackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,10 +288,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7E57A00000000000000A006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01ACD23FBB29D9D29855138F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E57A00000000000000A004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,6 +528,50 @@
 			};
 			name = Debug;
 		};
+		D7E57A00000000000000A008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR5YAK7GKS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.2;
+				"TEST_HOST[sdk=iphoneos*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/OnTrack";
+				"TEST_HOST[sdk=iphonesimulator*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/OnTrack";
+				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/Contents/MacOS/OnTrack";
+			};
+			name = Debug;
+		};
+		D7E57A00000000000000A009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR5YAK7GKS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.2;
+				"TEST_HOST[sdk=iphoneos*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/OnTrack";
+				"TEST_HOST[sdk=iphonesimulator*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/OnTrack";
+				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/OnTrack.app/Contents/MacOS/OnTrack";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +589,15 @@
 			buildConfigurations = (
 				68ED0351AD1A42B7A8A89F69 /* Debug */,
 				63BC37520F8E95252B1A0E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D7E57A00000000000000A007 /* Build configuration list for PBXNativeTarget "OnTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E57A00000000000000A008 /* Debug */,
+				D7E57A00000000000000A009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
