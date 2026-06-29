@@ -22,5 +22,8 @@ build/
 # Just in case the compiler still creates these files
 *.hmap
 
+# Sparkle
+Sparkle-tools/
+
 # Claude Code
 .claude/settings.local.json
