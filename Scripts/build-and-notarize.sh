@@ -117,6 +117,7 @@ echo "==> Archiving..."
 xcodebuild archive \
     -project "$PROJECT_DIR/$APP_NAME.xcodeproj" \
     -scheme "$SCHEME" \
+    -sdk macosx \
     -archivePath "$ARCHIVE_PATH" \
     -configuration Release \
     -arch arm64 \
