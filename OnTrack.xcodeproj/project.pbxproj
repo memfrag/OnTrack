@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		056912A677A6BDB1891BE621 /* OnTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OnTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		056912A677A6BDB1891BE621 /* OnTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CF6380FE42DB1DF05B132E /* AppDesign */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppDesign; path = Packages/AppDesign; sourceTree = SOURCE_ROOT; };
 		D7E57A00000000000000A002 /* OnTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,8 +51,6 @@
 			membershipExceptions = (
 				iOS/Info.plist,
 				macOS/Info.plist,
-				"macOS/scripts/build-and-notarize.sh",
-				macOS/scripts/ExportOptions.plist,
 				visionOS/Info.plist,
 			);
 			target = 787DA3D7436CB4BC2C86E24D /* OnTrack */;
@@ -460,12 +458,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				"CODE_SIGN_STYLE[sdk=iphoneos*]" = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"OnTrack/Preview Content\"";
 				"ENABLE_APP_SANDBOX[sdk=macosx*]" = YES;
 				"ENABLE_OUTGOING_NETWORK_CONNECTIONS[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				"ENABLE_USER_SELECTED_FILES[sdk=macosx*]" = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTrack/macOS/Sparkle-tools",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnTrack/macOS/Info.plist;
 				"INFOPLIST_FILE[sdk=iphoneos*]" = OnTrack/iOS/Info.plist;
@@ -547,12 +549,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				"CODE_SIGN_STYLE[sdk=iphoneos*]" = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"OnTrack/Preview Content\"";
 				"ENABLE_APP_SANDBOX[sdk=macosx*]" = YES;
 				"ENABLE_OUTGOING_NETWORK_CONNECTIONS[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				"ENABLE_USER_SELECTED_FILES[sdk=macosx*]" = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTrack/macOS/Sparkle-tools",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnTrack/macOS/Info.plist;
 				"INFOPLIST_FILE[sdk=iphoneos*]" = OnTrack/iOS/Info.plist;
