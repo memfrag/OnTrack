@@ -7,8 +7,6 @@ import KeyValueStore
 
 // MARK: - Mock Store
 
-#if DEBUG
-
 extension AppSettings {
 
     /// Creates a mock instance of `AppSettings` for use in previews and testing.
@@ -24,5 +22,3 @@ extension AppSettings {
         return AppSettings(store: store.eraseToAnyKeyValueStore())
     }
 }
-
-#endif

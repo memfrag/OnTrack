@@ -35,7 +35,6 @@ extension ModelContainer {
         }
     }
 
-    #if DEBUG
     /// Builds an in-memory container seeded with realistic sample data for previews and tests.
     ///
     /// - Parameter seeded: When `true`, the store is populated with ~120 days of sample
@@ -57,10 +56,7 @@ extension ModelContainer {
             fatalError("Failed to create mock ModelContainer: \(error)")
         }
     }
-    #endif
 }
-
-#if DEBUG
 
 /// Generates deterministic sample data for previews and tests.
 enum SampleData {
@@ -105,5 +101,3 @@ enum SampleData {
         try? context.save()
     }
 }
-
-#endif

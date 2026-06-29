@@ -10,10 +10,9 @@ extension AppEnvironment {
 
     // MARK: - Mock AppEnvironment
 
-    #if DEBUG
     /// Builds a mock environment configured for development and preview usage.
     ///
-    /// Available only in `DEBUG` builds.
+    /// Available in all configurations because `#Preview` bodies compile into Release builds too.
     ///
     /// - Returns: A new ``AppEnvironment`` instance with mocked dependencies.
     ///
@@ -28,5 +27,4 @@ extension AppEnvironment {
             engineeringMode: EngineeringMode.shared
         )
     }
-    #endif
 }

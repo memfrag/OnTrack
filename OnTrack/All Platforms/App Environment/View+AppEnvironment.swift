@@ -35,7 +35,6 @@ extension View {
             .modelContainer(appEnvironment.modelContainer)
     }
 
-    #if DEBUG
     func previewEnvironment() -> some View {
         let appEnvironment = AppEnvironment.mock()
         return self
@@ -47,5 +46,4 @@ extension View {
             .environment(appEnvironment.engineeringMode)
             .modelContainer(appEnvironment.modelContainer)
     }
-    #endif
 }
