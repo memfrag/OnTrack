@@ -8,5 +8,7 @@
     <string>DR5YAK7GKS</string>
     <key>signingStyle</key>
     <string>automatic</string>
+    <key>iCloudContainerEnvironment</key>
+    <string>Production</string>
 </dict>
 </plist>
