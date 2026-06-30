@@ -205,7 +205,7 @@ cat >"$EXPORT_OPTIONS_PATH" <<EOF
 <plist version="1.0">
 <dict>
     <key>method</key>
-    <string>app-store</string>
+    <string>app-store-connect</string>
     <key>destination</key>
     <string>upload</string>
     <key>signingStyle</key>
