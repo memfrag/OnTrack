@@ -6,9 +6,15 @@
     {
       "layers" : [
         {
-          "glass" : false,
-          "image-name" : "hammer.png",
-          "name" : "hammer"
+          "image-name" : "Image.png",
+          "name" : "Image",
+          "position" : {
+            "scale" : 2,
+            "translation-in-points" : [
+              0,
+              -197.5546875
+            ]
+          }
         }
       ],
       "shadow" : {
