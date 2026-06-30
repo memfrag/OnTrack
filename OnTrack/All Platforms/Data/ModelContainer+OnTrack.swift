@@ -4,6 +4,7 @@
 
 import Foundation
 import SwiftData
+import OSLog
 
 extension ModelContainer {
 
@@ -18,20 +19,35 @@ extension ModelContainer {
 
     /// Builds the live, on-disk container used by the running app.
     ///
-    /// CloudKit sync is intentionally disabled (`.none`) for now. The models are already
-    /// CloudKit-compatible, so enabling sync later is a one-line change to `cloudKitDatabase`
-    /// plus adding the iCloud capability and entitlement.
+    /// Syncs across the user's devices via their **private** CloudKit database
+    /// (`.automatic` uses the single iCloud container declared in the app's entitlement,
+    /// `iCloud.io.apparata.OnTrack`). The models are CloudKit-compatible (all attributes
+    /// optional/defaulted, no `.unique`, no enforced uniqueness). When the device isn't
+    /// signed into iCloud, SwiftData simply operates on the local store without syncing.
     ///
     @MainActor static func makeLive() -> ModelContainer {
-        let configuration = ModelConfiguration(
+        // Prefer the CloudKit-backed store; fall back to a local-only store if CloudKit
+        // setup fails (e.g. a build whose iCloud container isn't provisioned yet) so the
+        // app still launches and works offline.
+        let cloudConfiguration = ModelConfiguration(
             schema: onTrackSchema,
             isStoredInMemoryOnly: false,
-            cloudKitDatabase: .none
+            cloudKitDatabase: .automatic
         )
         do {
-            return try ModelContainer(for: onTrackSchema, configurations: configuration)
+            return try ModelContainer(for: onTrackSchema, configurations: cloudConfiguration)
         } catch {
-            fatalError("Failed to create live ModelContainer: \(error)")
+            Logger.data.error("CloudKit container unavailable (\(error.localizedDescription)); using local-only store.")
+            let localConfiguration = ModelConfiguration(
+                schema: onTrackSchema,
+                isStoredInMemoryOnly: false,
+                cloudKitDatabase: .none
+            )
+            do {
+                return try ModelContainer(for: onTrackSchema, configurations: localConfiguration)
+            } catch {
+                fatalError("Failed to create live ModelContainer: \(error)")
+            }
         }
     }
 

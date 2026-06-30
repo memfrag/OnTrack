@@ -50,7 +50,9 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				iOS/Info.plist,
+				"iOS/OnTrack.entitlements",
 				macOS/Info.plist,
+				"macOS/OnTrack.entitlements",
 				visionOS/Info.plist,
 			);
 			target = 787DA3D7436CB4BC2C86E24D /* OnTrack */;
@@ -486,6 +488,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "OnTrack/iOS/OnTrack.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "OnTrack/iOS/OnTrack.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "OnTrack/macOS/OnTrack.entitlements";
 				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrack;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SDKROOT = auto;
@@ -577,6 +582,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "OnTrack/iOS/OnTrack.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "OnTrack/iOS/OnTrack.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "OnTrack/macOS/OnTrack.entitlements";
 				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrack;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SDKROOT = auto;
