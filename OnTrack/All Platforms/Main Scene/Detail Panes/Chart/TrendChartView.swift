@@ -36,6 +36,17 @@ struct TrendChartView: View {
 
     var body: some View {
         Chart {
+            // Raw measurements: thin straight lines between points, plus faint dots.
+            ForEach(series.raw) { point in
+                LineMark(
+                    x: .value("Date", point.date),
+                    y: .value("Weight", display(point)),
+                    series: .value("Series", "Raw")
+                )
+                .foregroundStyle(rawColor.opacity(0.35))
+                .lineStyle(StrokeStyle(lineWidth: 1))
+                .interpolationMethod(.linear)
+            }
             ForEach(series.raw) { point in
                 PointMark(
                     x: .value("Date", point.date),
@@ -45,10 +56,12 @@ struct TrendChartView: View {
                 .symbolSize(18)
             }
 
+            // Trend: emphasized smooth 7-day moving average.
             ForEach(series.trend) { point in
                 LineMark(
                     x: .value("Date", point.date),
-                    y: .value("Trend", display(point))
+                    y: .value("Trend", display(point)),
+                    series: .value("Series", "Trend")
                 )
                 .foregroundStyle(trendColor)
                 .lineStyle(StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
