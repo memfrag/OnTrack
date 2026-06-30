@@ -10,6 +10,8 @@ import SwiftUI
 /// matching the desktop mockup. Double-click a row to edit; "Show All" jumps to the Entries tab.
 struct RecentEntriesTable: View {
 
+    @Environment(WeightRepository.self) private var repository
+
     let entries: [WeightEntry]
     let unit: WeightUnit
     var onShowAll: () -> Void
@@ -78,6 +80,7 @@ struct RecentEntriesTable: View {
             .contextMenu(forSelectionType: UUID.self) { ids in
                 if let id = ids.first {
                     Button("Edit…") { onEdit(id) }
+                    Button("Delete", role: .destructive) { delete(id) }
                 }
             } primaryAction: { ids in
                 if let id = ids.first { onEdit(id) }
@@ -85,6 +88,12 @@ struct RecentEntriesTable: View {
         }
         .padding(16)
         .background(.background.secondary, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    private func delete(_ id: UUID) {
+        if let entry = entries.first(where: { $0.id == id }) {
+            repository.deleteEntry(entry)
+        }
     }
 }
 
