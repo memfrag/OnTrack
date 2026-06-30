@@ -456,7 +456,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = OnTrack/macOS/OnTrack.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_ASSET_PATHS = "\"OnTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = DR5YAK7GKS;
 				"ENABLE_APP_SANDBOX[sdk=macosx*]" = YES;
@@ -484,7 +484,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrack;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -549,7 +549,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = OnTrack/macOS/OnTrack.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_ASSET_PATHS = "\"OnTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = DR5YAK7GKS;
 				"ENABLE_APP_SANDBOX[sdk=macosx*]" = YES;
@@ -577,7 +577,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = io.apparata.OnTrack;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
