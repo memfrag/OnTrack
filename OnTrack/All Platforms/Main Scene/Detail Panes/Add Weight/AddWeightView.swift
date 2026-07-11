@@ -55,7 +55,7 @@ struct AddWeightView: View {
 
                 Section {
                     HStack(alignment: .firstTextBaseline) {
-                        TextField("0.0", text: $weightText)
+                        TextField("", text: $weightText)
                             #if os(iOS)
                             .keyboardType(.decimalPad)
                             #endif
