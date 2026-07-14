@@ -3,6 +3,15 @@
     <channel>
         <title>OnTrack</title>
         <item>
+            <title>1.0.7</title>
+            <pubDate>Tue, 14 Jul 2026 11:21:34 +0200</pubDate>
+            <sparkle:version>1.0.7</sparkle:version>
+            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.3</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/memfrag/OnTrack/releases/download/1.0.7/OnTrack-1.0.7.dmg" length="3692397" type="application/octet-stream" sparkle:edSignature="ccy5Cxupi8eLy+8uVIcaS8dRgtdofhKSJEu6AU2v/tTQ5q7SkCUeDoZ03BEMvjMCobby7UvF0vxZ6xFDjkM0Aw=="/>
+        </item>
+        <item>
             <title>1.0.6</title>
             <pubDate>Tue, 14 Jul 2026 11:11:22 +0200</pubDate>
             <sparkle:version>1.0.6</sparkle:version>
@@ -19,15 +28,6 @@
             <sparkle:minimumSystemVersion>26.3</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://github.com/memfrag/OnTrack/releases/download/1.0.5/OnTrack-1.0.5.dmg" length="3693423" type="application/octet-stream" sparkle:edSignature="cUo4Kt7kMA3aamtgVeU3+NXbSzdgF5bqVd5AidbMht4QOmP+59nCoYUtFvPsFqXHDlE3A3sdN6DaHT6IA9PFBA=="/>
-        </item>
-        <item>
-            <title>1.0.4</title>
-            <pubDate>Tue, 30 Jun 2026 23:41:24 +0200</pubDate>
-            <sparkle:version>1.0.4</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.3</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/memfrag/OnTrack/releases/download/1.0.4/OnTrack-1.0.4.dmg" length="3693295" type="application/octet-stream" sparkle:edSignature="Lrn04QSfKw2OpqtPKk0QIVqNiXyN8Uyl6B0FrJcQMeJFAmFsBqj8+C1p4/sK9eI1fsL060+hqOdltG9AvEbrCw=="/>
         </item>
     </channel>
 </rss>
