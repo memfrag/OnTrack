@@ -55,7 +55,6 @@ struct OnTrackApp: App {
         #endif
 
         #if os(macOS)
-        MenuBarWindow()
         SettingsWindow()
         HelpWindow()
         #endif
